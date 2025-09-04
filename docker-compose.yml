@@ -1,0 +1,15 @@
+services:
+  carbon_batch:
+    image: pielebo/carbon-filter:latest
+    # Or build locally:
+    # build: .
+    command: ["--in", "/in", "--out", "/out", "--adapter", "/models/Carbon_xlmr_lora", "--base-model", "xlm-roberta-base", "--threshold", "0.25"]
+    environment:
+      - INPUT_DIR=/in
+      - OUTPUT_DIR=/out
+      - MODEL_DIR=/models/Carbon_xlmr_lora
+    volumes:
+      - ./testpdf:/in:ro
+      - ./cuts:/out
+      - ./Carbon_xlmr_lora:/models/Carbon_xlmr_lora:ro
+

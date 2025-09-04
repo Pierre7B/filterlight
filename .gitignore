@@ -1,0 +1,40 @@
+# Python cache/bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+env/
+venv/
+ENV/
+
+# Logs / temp
+*.log
+*.tmp
+
+# Model checkpoints (huge files)
+Carbon_xlmr_lora/checkpoint-*/
+Carbon_xlmr_lora/*.safetensors
+Carbon_xlmr_lora/*.bin
+Carbon_xlmr_lora/*.pt
+Carbon_xlmr_lora/*.pth
+Carbon_xlmr_lora/train.log
+
+# Outputs (generated each run)
+cuts/
+testpdf/
+
+# Docker
+*.pid
+*.tar
+*.img
+*.iml
+.dockerignore
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
